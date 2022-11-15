@@ -1,0 +1,80 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+  		<meta charset="UTF-8">
+  
+    
+  		<title>REAL PROPERTY</title>
+			<style>
+				#example {
+   			 		border: 2px solid black;
+  			 		padding: 25px;
+    			 		background-repeat: no-repeat;
+			 		background-size: auto;
+			 		background-image:url("C:\Users\MahaGaNapathi\Downloads\END2END\REALPROJ\static\images\real-estate.jpg");
+					}
+			</style>
+	
+	</head>
+ 
+<body>
+
+      <!-- Show Real Estate Company banner-->
+     
+  
+    <div id="example" style="color:blue">
+	 <img src="C:\Users\MahaGaNapathi\Downloads\END2END\REALPROJ\static\images\real-estate.jpg" alt="real" style="width:100%;height:100%"> 
+	
+        <form action="{{ url_for('predict')}}" method="post">
+            <h2>Estimated Sale Price</h2>
+            <h3>House Age</h3><input id="first" name="House_age_in_years" type="number"><br>
+            <h3>House Remodel Age</h3><input id="first" name="House_remodel_age_in_years" type="number"><br>
+            <h3>Lot Area</h3><input id="second" name="LotArea" type="number"><br>
+
+            <h3>Type 1 finished square feet (In sqft)</h3><input id="third" name="BsmtFinSF1" type="number" required="required"><br>
+            <h3>Total square feet of basement area</h3><input id="fourth" name="TotalBsmtSF" type="number" required="required"><br>
+            <h3>First Floor square feet </h3><input id="fifth" name="FirstFlrSF" type="number" required="required"><br>
+            <h3>Second floor square feet </h3><input id="sixth" name="SecondFlrSF" type="number" required="required"><br>
+            <h3>Above grade (ground) living area square feet</h3><input id="seventh" name="GrLivArea" type="number" required="required"><br>
+            <h3>Garage Area</h3><input id="eigth" name="GarageArea" type="number"><br>
+            <h3>Full bathrooms above grade </h3><select name="FullBath" id="ninth" type="number" required="required"><br>
+                <option value=0>0</option>
+                <option value=1>1</option>
+                <option value=2>2</option>
+                <option value=3>3</option>
+            </select>
+            <h3>Rate of the house </h3>
+	    <select name="OverallQual" id="tenth" type="number" required="required">
+                <option value=1>1</option>
+                <option value=2>2</option>
+                <option value=3>3</option>
+                <option value=4>4</option>
+                <option value=5>5</option>
+                <option value=6>6</option>
+                <option value=7>7</option>
+                <option value=8>8</option>
+                <option value=9>9</option>
+                <option value=10>10</option>
+              
+            </select><br>
+            
+            
+            <br><br><button id="sub" type="submit ">Calculate the Sale Price</button>
+            <br>
+
+        </form>
+
+         
+       <!-- Show predicted output using ML model --> 
+       <div>
+           <center>
+               <h1>{{ prediction_text }}</h1>
+           </center>
+       </div>
+
+     </div>
+
+</body>
+</html>
+
