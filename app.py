@@ -21,9 +21,12 @@ def predict():
    features=[np.array(int_features)]
         
    prediction=model.predict(features)
-                                                                         
+
+   prediction=int(prediction[0])    
+
+                                                                     
         
-   return render_template('real_index.html',prediction_text = "You can purchase this House at {}".format(prediction))
+   return render_template('real_index.html',prediction_text = 'You can purchase this House at 'u"\u20B9" ' {}'.format(prediction))
     
 
 if __name__=="__main__":
