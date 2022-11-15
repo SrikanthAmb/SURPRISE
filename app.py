@@ -4,7 +4,7 @@ import numpy as np
 
 app = Flask(__name__)
 
-ridge_model=pickle.load(open('ridge_model.pkl','rb'))
+model=pickle.load(open('model.pkl','rb'))
 
 @app.route('/',methods=['GET'])
 
@@ -20,10 +20,10 @@ def predict():
         
    features=[np.array(int_features)]
         
-   prediction=ridge_model.predict(features)
+   prediction=model.predict(features)
                                                                          
         
-   return render_template('real_index.html',prediction_text = "You Can purchase this House at {}".format(prediction))
+   return render_template('real_index.html',prediction_text = "You can purchase this House at {}".format(prediction))
     
 
 if __name__=="__main__":
