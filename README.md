@@ -14,6 +14,8 @@
 4.[GitCLI](https://git-scm.com/book/en/v2/Getting-Started-The-Command-Line)
 
 
+````````````````````````````````````````````````````````````````````````````````
+
 Cloning Github repository to selected folder
 -----------------------------------------------
 git clone https://github.com/SrikanthAmb/SURPRISE.git
