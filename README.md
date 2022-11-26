@@ -69,7 +69,7 @@ Place the above values in secret repositories created in Github Action secrets.
 
 Deployment
 -------------
-Connect to github repository "TELECOM-CHURN", and push the "Deploy" button.
+Connect to github repository "SURPRISE", and push the "Deploy" button.
 You can view / open  the app on the up right corner.
 
 `````````````````````````````````````````````````````````````````````````````````````````````````````````````
